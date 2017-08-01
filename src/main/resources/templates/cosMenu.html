@@ -34,6 +34,17 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"></link>
 </head>
 <body class="hold-transition skin-blue">
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+
+    var data = [[${name}]];
+    console.log(data);
+
+/*]]>*/
+</script>
+
+
 <div class="wrapper">
     <header class="main-header">
 
@@ -48,279 +59,18 @@
         <nav class="navbar navbar-static-top">
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
+                 <ul class="nav navbar-nav">
 
                     <!--전기안전통합관제시스템 메뉴-->
-                    <li class="nav navbar-nav" style="margin-top: 4px">
-                        <button type="button" class="btn btn-primary btn-lg btn btn-primary"
-                                style="background-color: #53ccff" onclick="location.href='./cos'">전기안전이상
-                        </button>
-                    </li>
-                    <li class="nav navbar-nav" style="margin-top: 4px">
-                        <button type="button" class="btn btn-primary btn-lg btn-primary"
-                                style="background-color: #2c36ff" onclick="location.href='./mlist'">관제망관리
-                        </button>
-                    </li>
-                    <li class="nav navbar-nav" style="margin-top: 4px">
-                        <button type="button" class="btn btn-primary btn-lg btn-primary"
-                                style="background-color: #2c36ff">분석/해석
-                        </button>
-                    </li>
-                    <li class="nav navbar-nav" style="margin-top: 4px">
-                        <button type="button" class="btn btn-primary btn-lg btn-primary"
-                                style="background-color: #2c36ff">기준정보관리
-                        </button>
-                    </li>
+                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./cos'">전기안전이상</button> </li>
+                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./mlist'">관제망관리</button> </li>
+                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;">분석/해석</button> </li>
+                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;">기준정보관리</button> </li>
 
                     <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="/AdminLTE-2.4.0/dist/img/user2-160x160.jpg" class="img-circle"
-                                                     alt="User Image"></img>
-                                            </div>
-                                            <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="/AdminLTE-2.4.0/dist/img/user3-128x128.jpg" class="img-circle"
-                                                     alt="User Image"></img>
-                                            </div>
-                                            <h4>
-                                                ZIumKS Design Team
-                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="/AdminLTE-2.4.0/dist/img/user4-128x128.jpg" class="img-circle"
-                                                     alt="User Image"></img>
-                                            </div>
-                                            <h4>
-                                                Developers
-                                                <small><i class="fa fa-clock-o"></i> Today</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="/AdminLTE-2.4.0/dist/img/user3-128x128.jpg" class="img-circle"
-                                                     alt="User Image"></img>
-                                            </div>
-                                            <h4>
-                                                Sales Department
-                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="/AdminLTE-2.4.0/dist/img/user4-128x128.jpg" class="img-circle"
-                                                     alt="User Image"></img>
-                                            </div>
-                                            <h4>
-                                                Reviewers
-                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                    </li>
+                   
                     <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Very long description here that
-                                            may not fit into the
-                                            page and may cause design problems
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-red"></i> 5 new members joined
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-red"></i> You changed your username
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-                    <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
-                                                     role="progressbar"
-                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Create a nice theme
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%"
-                                                     role="progressbar"
-                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Some task I need to do
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%"
-                                                     role="progressbar"
-                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Make beautiful transitions
-                                                <small class="pull-right">80%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%"
-                                                     role="progressbar"
-                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">80% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/AdminLTE-2.4.0/dist/img/zium.png" class="user-image" alt="User Image"></img>
-                            <span class="hidden-xs">지음지식서비스</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="/AdminLTE-2.4.0/dist/img/zium.png" class="img-circle" alt="User Image"></img>
-
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                  
                     <!-- Control Sidebar Toggle Button -->
                     <li>
                         <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
@@ -352,7 +102,7 @@
                     <div class="col-md-8">
                         <table>
                             <tr>
-                                <td> <p style="font-size: x-large; padding-bottom: 0%;padding-top: 2%">OO(주) 전주 사업장</p></td>
+                                <td> <p style="font-size: x-large; padding-bottom: 0%;padding-top: 2%" th:text="${name}">OO(주) 전주 사업장</p></td>
                                 <td style="padding-left: 10%; padding-bottom: 2%"> <button type="button" class="btn btn-info btn-flat" >사업장 메인</button></td>
                             </tr>
                             <tr>
@@ -384,225 +134,17 @@
                 <!--관제 사업장-->
                 <div class="row" style="height: 100px">
                     <!--관제사업장 테이블-->
-                    <div class="col-md-6">
-                        <table class="table table-bordered" border="1">
-                            <tr class="info">
-                                <td rowspan="2" style="font-style: inherit; text-align: center">관제 사업장</td>
-                                <td style="text-align: center; font-style: inherit;">자가용</td>
-                                <td style="text-align: center; font-style: inherit;">일반용</td>
-                            </tr>
-                            <tr>
-                                <td>99</td>
-                                <td>999</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!--관제포인트 테이블-->
-                    <div class="col-md-6">
-                        <table class="table table-bordered " border="1">
-                            <tr class="info">
-                                <td rowspan="2" style="text-align: center; font-style: inherit;">관제포인트</td>
-                                <td style="text-align: center; font-style: inherit;">단상</td>
-                                <td style="text-align: center; font-style: inherit;">3상</td>
-                            </tr>
-                            <tr>
-                                <td>99</td>
-                                <td>999</td>
-                            </tr>
-                        </table>
-                    </div>
+					<img alt="" src="/img/kang01.jpg" />
                 </div>
                 <!--이상조치현황-->
-                <div class="row"></div>
-                <!--이상 게이지-->
-                <div class="col-md-3">
-                    <!--http://www.jqueryscript.net/chart-graph/Creating-Animated-Gauges-Using-jQuery-Raphael-js-kumaGauge.html 추가-->
-                    <!--<div class="js-gauge {class이름} gauge"></div>-->
-                    <div class="row js-gauge rmd gauge" id="rmd1"></div>
-                    <div class="row js-gauge rmd gauge" id="rmd2"></div>
+                <div class="row">
+                
+                	<img alt="" src="/img/kang02.jpg" />
                 </div>
-                <!--이상발생 및 조치 현황 월간, 주간, 일간-->
-                <div class="col-md-9" style="height:350px; overflow:scroll">
-                    <table class="table table-bordered table-responsive table-hover" border="1" width="100%">
-                        <thead>
-                        <tr class="info">
-                            <td colspan="4">이상 발생 및 조치 현황 (조치/발생)</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th>구분</th>
-                            <th>월간</th>
-                            <th>주간</th>
-                            <th>일간</th>
-                        </tr>
-                        <tr>
-                            <th>이상1</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상2</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상3</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상4</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상5</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상6</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상6</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상6</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상6</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        <tr>
-                            <th>이상6</th>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                            <td>00/00</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                
                 <!--실시간 이상발생-->
                 <div class="row">
-                    <div class="col-md-12" style="height:350px; overflow:scroll">
-                        <table class="table table-bordered table-responsive table-hover" border="1" width="100%">
-                            <thead>
-                            <tr class="info">
-                                <td colspan="5" style="text-align: center">실시간 이상발생</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th>일시</th>
-                                <th>사업장명</th>
-                                <th>이상명칭</th>
-                                <th>포인트NO</th>
-                                <th>대응상황</th>
-                            </tr>
-                            <tr class="danger" onclick="location.href='./sdata'" style="color: #9e0505" >
-                                <td>2017/07/27 08:20</td>
-                                <td>AAA</td>
-                                <td>이상1</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>감지</td>
-                            </tr>
-                            <tr class="danger" onclick="location.href='./sdata'" style="color: #9e0505">
-                                <td>2017/07/27 07:20</td>
-                                <td>BBB</td>
-                                <td>이상2</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>감지</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:14</td>
-                                <td>CCC</td>
-                                <td>이상3</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:10</td>
-                                <td>DDD</td>
-                                <td>이상4</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            <tr>
-                                <td>2017/07/27 07:04</td>
-                                <td>EEE</td>
-                                <td>이상5</td>
-                                <td>C_0000x_P_00x</td>
-                                <td>조치중</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <img alt="" src="/img/kang03.jpg" />
                 </div>
             </div>
         </div>
@@ -657,11 +199,27 @@
 <script src="/AdminLTE-2.4.0/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- iCheck 1.0.1 -->
 <script src="/AdminLTE-2.4.0/plugins/iCheck/icheck.min.js"></script>
-<script> $(function () {
+
+
+
+<script> 
+
+$(function () {
 //iCheck for checkbox and radio inputs
 $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
     checkboxClass: 'icheckbox_square-blue',
     radioClass: 'iradio_square--blue'
-})});</script>
+});
+
+if( data == '국민은행'){
+	alert("kang is name");
+}
+
+});
+
+</script>
+
+
+
 </body>
 </html>
