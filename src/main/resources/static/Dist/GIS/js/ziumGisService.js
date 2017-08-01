@@ -13,7 +13,7 @@ vw.ol3.MapOptions = {
     basemapType: vw.ol3.BasemapType.GRAPHIC
     , controlDensity: vw.ol3.DensityType.FULL
     , interactionDensity: vw.ol3.DensityType.BASIC
-    , controlsAutoArrange: true
+    , controlsAutoArrange: false
     , homePosition: vw.ol3.CameraPosition
     , initPosition: vw.ol3.CameraPosition
 };
@@ -27,7 +27,8 @@ $.ajax({
     url: "http://220.230.115.67:9002/log", //jerry's 네이버 클라우드 플랫폼 이용
     success: function (result) {
         addTextLayer(result, 'EPSG:4326');
-        console.log("static.Dist.GIS DATA log 호출완료")
+        console.log("static.Dist.GIS DATA log 호출완료");
+
     }
 });
 
@@ -277,7 +278,7 @@ function checkMarkerParam() {
 }
 
 var textLayer;
-var distance = 100;
+var distance = 0;
 
 function addTextLayer(fileObj, epsgCode) {
     var epsg = epsgCode;
@@ -289,7 +290,11 @@ function addTextLayer(fileObj, epsgCode) {
         textLayer = new vw.ol3.layer.TEXTLayer(vmap, epsg);
     }
     vmap.getView().setZoom(7);
-    var files = fileObj.toString();
+    
+    //var files = fileObj.toString();
+    var files = "\n 126.9681625	37.59140487	계측기 no_1	<b>일시:</b>2017/07/27 08:20<br><b>지역:</b>경기도<br><b>업체명:</b>(주)삼성물산<br><b>전기사용량:</b>12,000<button type='button' onclick='location.href='./sdata''>데이터보기</button> \n \
+126.9663629	37.58564301	계측기 no_2	<b>일시:</b>2017/07/27 08:20<br><b>지역:</b>경기도<br><b>업체명:</b>서울대학병원<br><b>전기사용량:</b>12,001<button type='button' onclick='location.href='./sdata''>데이터보기</button> \n \
+126.9680534	37.58499936	계측기 no_3	<b>일시:</b>2017/07/27 08:20<br><b>지역:</b>경기도<br><b>업체명:</b>부산대학교<br><b>전기사용량:</b>12,002<button type='button' onclick='location.href='./sdata''>데이터보기</button>"
     textLayer.readDraw(epsg, distance, files);
 }
 
@@ -635,4 +640,15 @@ function mashUpWithDaum(lat, lot, id) {
      });*/
     alert(lat + " " + lot + " " + id);
     setting(lat, lot, id);
-}});
+}
+
+$("#chartMapButton").click(function (){
+	alert("hello");
+	addPieChart();
+	pieChartShow();
+});
+
+
+
+
+});
