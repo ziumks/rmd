@@ -16,11 +16,17 @@
     <link rel="stylesheet" href="/AdminLTE-2.4.0/bower_components/jvectormap/jquery-jvectormap.css"></link>
     <!-- Theme style -->
     <link rel="stylesheet" href="/AdminLTE-2.4.0/dist/css/AdminLTE.min.css"></link>
+    <style>
+.ziumcenter {
+    margin: auto;
+    width: 80%;
+    border: none;
+    padding: 2px;
+}
+</style>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/AdminLTE-2.4.0/dist/css/skins/_all-skins.min.css"></link>
-    <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="/AdminLTE-2.4.0/plugins/iCheck/all.css"></link>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,17 +40,6 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"></link>
 </head>
 <body class="hold-transition skin-blue">
-
-<script th:inline="javascript">
-/*<![CDATA[*/
-
-    var data = [[${name}]];
-    console.log(data);
-
-/*]]>*/
-</script>
-
-
 <div class="wrapper">
     <header class="main-header">
 
@@ -59,10 +54,10 @@
         <nav class="navbar navbar-static-top">
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
-                 <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
 
                     <!--전기안전통합관제시스템 메뉴-->
-                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./cos?name=moo'">전기안전이상</button> </li>
+                    <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./cos?name=kang'">전기안전이상</button> </li>
                     <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./mlist'">관제망관리</button> </li>
                     <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;" onclick="location.href='./analysis'">분석/해석</button> </li>
                     <li class="nav navbar-nav"><button type="button" class="btn btn-primary btn-lg btn-primary" style="background-color: #2c36ff; margin-top: 14px; font-size:12px;">기준정보관리</button> </li>
@@ -80,70 +75,10 @@
         </nav>
     </header>
     <!-- Contents -->
-    <div class="container-fluid" style="background-color:#ffffff">
-        <div class="row" style="margin-bottom: 10px"></div>
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-12" style="font-size: medium; font-style: inherit; padding-bottom: 1%"><span id="clock" ></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-group input-group-sm">
-
-                    </div>
-                </div>
-                <!--사업장타이틀메뉴-->
-                <div class="row bg-info">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-8">
-                        <table>
-                            <tr>
-                                <td> <p style="font-size: x-large; padding-bottom: 0%;padding-top: 2%" >무주덕유산리조트</p></td>
-                                <td style="padding-left: 10%; padding-bottom: 2%"></td>
-                            </tr>
-                            <tr>
-                                <td><p style="font-size: large">전라북도 무주군 설천면 만선로 185</p></td>
-                                <td style="padding-left: 10%; padding-bottom: 2%"><button type="button" class="btn btn-info btn-flat" onclick="location.href='./sdata?name=moo'">조회</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- Map will be created here -->
-                <!--<div id="world-map-markers" style="height: 400px;"></div>-->
-                <div class="row">
-                    <div class="box-body col-md-12" style=" height:770px; overflow:scroll;font-size: medium;padding: 5px 5px 5px 5px">
-                        <span><input type="checkbox" class="minimal">TR 1</input></span><br></br>
-                        <span><input type="checkbox" class="minimal">TR 2</input></span><br></br>
-                        <span><input type="checkbox" class="minimal">TR 3</input></span><br></br>
-                        <span><input type="checkbox" class="minimal">TR 4</input></span><br></br>
-                        <span><input type="checkbox" class="minimal">TR 5</input></span><br></br>
-                    </div>
-                </div>
-            </div>
-            <!--메인 오른편-->
-            <div class="col-md-7">
-                <div class="row" style="margin-bottom: 30px"></div>
-                <!--관제 사업장-->
-                <div class="row" style="height: 100px">
-                    <!--관제사업장 테이블-->
-					<img alt="" src="/img/moo01.jpg" />
-                </div>
-                <!--이상조치현황-->
-                <div class="row">
-                
-                	<img alt="" src="/img/moo02.jpg" />
-                </div>
-                
-                <!--실시간 이상발생-->
-                <div class="row">
-                    <img alt="" src="/img/moo03.jpg" />
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="ll">
+    <div class='tableauPlaceholder' id='viz1501611451404' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DE&#47;DEMO_KESCOTv_E4p&#47;sheet21&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DEMO_KESCOTv_E4p&#47;sheet21' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DE&#47;DEMO_KESCOTv_E4p&#47;sheet21&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1501611451404');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> </div>
     <!--footer-->
-    <div class="container-fluid" style="background-color:#ffffff">
+    <div class="container-fluid" style="background-color:#444; height:120px; margin-top:-80px;z-index:99">
         <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4" style="text-align: right"><strong>Copyright &copy; 2017 <a href="https://ziumks.com">(주)지음지식서비스</a>.</strong>
@@ -156,6 +91,7 @@
 
 <!-- jQuery 3 -->
 <script src="/AdminLTE-2.4.0/bower_components/jquery/dist/jquery.min.js"></script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="/AdminLTE-2.4.0/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -180,9 +116,11 @@
 <!--Raphael-->
 <script src="/Dist/js/raphael-min.js"></script>
 <!-- KumaGauge.js -->
-<script src="/Dist/js/kuma-gauge.jquery.js"></script>
-<!-- common.js -->
-<script src="/Dist/js/common.js"></script>
+<script src="/KumaGauge/kuma-gauge.jquery.js"></script>
+
+
+
+
 <!-- DataTables -->
 <script src="/AdminLTE-2.4.0/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="/AdminLTE-2.4.0/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -190,26 +128,6 @@
 <script src="/AdminLTE-2.4.0/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="/AdminLTE-2.4.0/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- iCheck 1.0.1 -->
-<script src="/AdminLTE-2.4.0/plugins/iCheck/icheck.min.js"></script>
-
-
-
-<script> 
-
-$(function () {
-//iCheck for checkbox and radio inputs
-$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-    checkboxClass: 'icheckbox_square-blue',
-    radioClass: 'iradio_square--blue'
-});
-
-
-
-});
-
-</script>
-
 
 
 </body>
